@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>Video to Audio Converter</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body { font-family: Arial, sans-serif; background: #f2f2f2; margin: 0; padding: 0;}
+      .container { max-width: 400px; margin: 60px auto; background: #fff; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px #bbb;}
+      h2 { color: #0099ff; }
+      input[type="text"] { width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc;}
+      button { margin-top: 20px; padding: 12px 30px; background: #0099ff; color: #fff; border: none; border-radius: 5px; font-size: 1em;}
+      .result { margin-top: 25px; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Video to Audio Converter</h2>
+      <input id="videoUrl" type="text" placeholder="Paste video URL here" />
+      <button onclick="convert()">Convert to Audio</button>
+      <div class="result" id="result"></div>
+    </div>
+    <script>
+      function convert() {
+        const url = document.getElementById('videoUrl').value;
+        if(!url) {
+          document.getElementById('result').innerHTML = "<span style='color:red;'>Please enter a video URL.</span>";
+          return;
+        }
+        // Yahan API call ya backend connection hoga (abhi demo message)
+        document.getElementById('result').innerHTML = "Sorry! Live conversion abhi possible nahi. <br>Backend/API ki zarurat hai.";
+      }
+    </script>
+  </body>
+</html>
